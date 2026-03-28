@@ -1,0 +1,27 @@
+
+#include <stdio.h>
+
+int main() {
+    int A[3], B[3];
+    int pontosA = 0, pontosB = 0;
+
+    // Exemplo de notas
+    // Funcionário A: produtividade, qualidade, pontualidade
+    A[0] = 60; A[1] = 50; A[2] = 95;
+
+    // Funcionário B: produtividade, qualidade, pontualidade
+    B[0] = 80; B[1] = 75; B[2] = 55;
+
+    for (int i = 0; i < 3; i++) {
+        if (A[i] > B[i]) {
+            pontosA++;
+        } else if (B[i] > A[i]) {
+            pontosB++;
+        }
+    }
+
+    printf("Pontuação do Funcionário A: %d\n", pontosA);
+    printf("Pontuação do Funcionário B: %d\n", pontosB);
+
+    return 0;
+}
