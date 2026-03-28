@@ -1,0 +1,28 @@
+
+#include <stdio.h>
+
+int main() {
+    char s[51];
+    int vogais = 0, consoantes = 0;
+
+    printf("Digite uma string (até 50 caracteres): ");
+    fgets(s, 41, stdin);
+
+    for (int i = 0; i < 51 && s[i] != '\0'; i++) {
+        char c = s[i];
+
+        // Verifica se é letra minúscula
+        if (c >= 'a' && c <= 'z') {
+            // Verifica se é vogal
+            if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u') {
+                vogais++;
+            } else {
+                consoantes++;
+            }
+        }
+    }
+
+    printf("%d %d\n", vogais, consoantes);
+
+    return 0;
+}
