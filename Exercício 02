@@ -1,0 +1,21 @@
+
+#include <stdio.h>
+
+int main() {
+    int reproducoes[] = {210, 350, 70, 100, 500, 780};
+    int tamanho = sizeof(reproducoes) / sizeof(reproducoes[0]);
+
+    int maiorSoma = 0;
+
+    for (int i = 0; i < tamanho - 1; i++) {
+        int soma = reproducoes[i] + reproducoes[i + 1];
+        if (soma > maiorSoma) {
+            maiorSoma = soma;
+        }
+    }
+
+    printf("A soma de dias consecutivos é: %d\n", maiorSoma);
+
+    return 0;
+}
+
